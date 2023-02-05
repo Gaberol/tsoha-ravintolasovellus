@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Restaurants</title>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    {% if restaurants %}
+    <ul>
+        {% for restaurant in restaurants %}
+        <li>{{ restaurant.name }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No restaurants found</p>
+    {% endif %}
+    {% if 'is_admin' in session and session['is_admin'] %}
+    <p><a href="{{ url_for('add_restaurant') }}">Add Restaurant</a></p>
+    {% endif %}
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>

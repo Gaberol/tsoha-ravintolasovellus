@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Add Restaurant</title>
+</head>
+<body>
+    <h1>Add Restaurant</h1>
+    <form action="{{ url_for('add_restaurant') }}" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <textarea name="description" placeholder="Description"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
